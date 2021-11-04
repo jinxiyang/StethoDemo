@@ -71,7 +71,7 @@ chrome://inspect/#devices
 ![stetho_demo_3](res1/stetho_demo_3.png)
 
 
-有如若干个tab页，其中用的最多的是**Network**和**res1**。
+有如若干个tab页，其中用的最多的是**Network**和**Resources**。
 
 
 在**Network**页，APP发送一个或者多次请求，会有相关请求的详情，我们可以查看网络的执行顺序、耗时情况、参数、返回数据、请求的调度顺序等，对APP就行优化。
@@ -97,7 +97,7 @@ chrome://inspect/#devices
 
 
 
-点击**res1**页，可以看APP的数据库、SharedPreferences
+点击**Resources**页，可以看APP的数据库、SharedPreferences
 
 
 ![stetho_demo_7](res1/stetho_demo_7.png)
@@ -118,7 +118,7 @@ chrome://inspect/#devices
 > 答案是有的
 
 
-我们知道，OKHttp使用的责任链模式，我们可以添加一个加解密拦截器。在请求发送时，先明文给到stetho展示，然后通过【加解密拦截器】加密请求数据，发送给服务器。在服务器响应后，通过【加解密拦截器】杰密返回数据，给到stetho展示。
+我们知道，OKHttp使用的责任链模式，我们可以添加一个加解密拦截器。在请求发送时，先明文给到stetho展示，然后通过【加解密拦截器】加密请求数据，发送给服务器。在服务器响应后，通过【加解密拦截器】解密返回数据，给到stetho展示。
 
 分析OKHTTP的RealCall.kt文件（OKHTTP的版本为：4.9.2），拦截器的调用链路代码：
 
@@ -366,7 +366,7 @@ builder.addNetworkInterceptor(new StethoInterceptor());
 
 > 解决方法：
 >
-> Chrome（谷歌浏览器）有BUG，打开DevTools有问题，
+> 最新版Chrome（谷歌浏览器）有BUG，打开DevTools有问题，
 >
 > 1、**换用Chromium浏览器**（推荐）
 >
@@ -378,7 +378,7 @@ builder.addNetworkInterceptor(new StethoInterceptor());
 > >
 > > Windows: [https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win/827102/](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win/827102/)
 >
-> 2、安装老版的Chrome（谷歌浏览器）
+> 2、安装老版的Chrome（谷歌浏览器），用19年版本的
 >
 >
 > PS，Stetho官方也有这个问题记录，[https://github.com/facebook/stetho/issues/696](https://github.com/facebook/stetho/issues/696)，感兴趣的可以去看看
