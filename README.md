@@ -360,7 +360,7 @@ builder.addNetworkInterceptor(new StethoInterceptor());
 ### 6、Chrome（谷歌浏览器）打开DevTools，界面显示混乱，各个子页面显示不出来，如图：
 
 
-![stetho_problem_2](https://github.com/jinxiyang/StethoDemo/blob/master/res1/stetho_problem_2.gif)
+![stetho_problem_2](res1/stetho_problem_2.gif)
 
 
 
