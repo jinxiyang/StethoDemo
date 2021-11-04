@@ -1,8 +1,8 @@
-#Stetho的介绍和使用
+# Stetho的介绍和使用
 
 
 
-###1、简介
+### 1、简介
 
 stetho是facebook开发的一个开源库，Android应用通过引入stetho，可以在Chrome/Chromium浏览器监控查看网络请求、数据库、SharedPreferences、UI布局层级等。
 
@@ -14,7 +14,7 @@ stetho是facebook开发的一个开源库，Android应用通过引入stetho，�
 **PS、我们在开发测试时，项目代码引入stetho，便于测试和调试，APP上线版本，这些都要去掉。**
 
 
-###2、**Stetho**的引入
+### 2、**Stetho**的引入
 
 **Stetho**库的地址：
 
@@ -54,7 +54,7 @@ builder.addNetworkInterceptor(new StethoInterceptor());
 okHttpClient = builder.build();
 ```
 
-###3、功能介绍
+### 3、功能介绍
 
 
 引入**Stetho**后，运行APP，打开Chrome/Chromium浏览器，地址输入：
@@ -106,7 +106,7 @@ chrome://inspect/#devices
 * IndexedDB：数据库，可执行SQL语句，查看相应的数据
 * Local Storage：SharedPreferences，可直接点击，修改数据
 
-###4、DevTools的Network页如何展示加密的网络请求？
+### 4、DevTools的Network页如何展示加密的网络请求？
 
 
 网络请求在实体网络传输中，可能会被查看到，然后通过脚本模拟网络请求，发起网络攻击。
@@ -346,7 +346,7 @@ builder.addNetworkInterceptor(new StethoInterceptor());
 ```
 
 
-###5、DevTools弹窗，一直空白，加载不出，或者显示HTTP/1.1 404 Not Found，如图：
+### 5、DevTools弹窗，一直空白，加载不出，或者显示HTTP/1.1 404 Not Found，如图：
 
 ![stetho_problem_1](res1/stetho_problem_1.png)
 
@@ -357,10 +357,10 @@ builder.addNetworkInterceptor(new StethoInterceptor());
 
 
 
-###6、Chrome（谷歌浏览器）打开DevTools，界面显示混乱，各个子页面显示不出来，如图：
+### 6、Chrome（谷歌浏览器）打开DevTools，界面显示混乱，各个子页面显示不出来，如图：
 
 
-![stetho_problem_2](res1/stetho_problem_2.gif)
+![stetho_problem_2](https://github.com/jinxiyang/StethoDemo/blob/master/res1/stetho_problem_2.gif)
 
 
 
